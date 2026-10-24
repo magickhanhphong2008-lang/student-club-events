@@ -1,0 +1,435 @@
+ <!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            🎓 Student Hub
+        </div>
+
+        <nav>
+
+            <a href="#home">Trang chủ</a>
+
+            <a href="#clubs">Câu lạc bộ</a>
+
+            <a href="#events">Sự kiện</a>
+
+            <a href="#about">Giới thiệu</a>
+
+        </nav>
+
+        <button
+            class="login-btn"
+            onclick="showLoginMessage()">
+
+            Đăng nhập
+
+        </button>
+
+    </header>
+
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="badge">
+                🌟 Cộng đồng sinh viên
+            </p>
+
+            <h1>
+                Khám phá
+                <span>câu lạc bộ</span>
+                và sự kiện
+                <br>
+                sinh viên
+            </h1>
+
+            <p>
+                Tìm câu lạc bộ phù hợp,
+                khám phá các hoạt động
+                và kết nối với sinh viên.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#clubs"
+                    class="primary-btn">
+
+                    Khám phá câu lạc bộ
+
+                </a>
+
+                <a
+                    href="#events"
+                    class="secondary-btn">
+
+                    Xem sự kiện
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <div class="hero-icon">
+                🎉
+            </div>
+
+            <h2>
+                Student Hub
+            </h2>
+
+            <p>
+                Tham gia - Kết nối - Phát triển
+            </p>
+
+            <div class="stats">
+
+                <div>
+                    <strong>12+</strong>
+                    <span>CLB</span>
+                </div>
+
+                <div>
+                    <strong>30+</strong>
+                    <span>Sự kiện</span>
+                </div>
+
+                <div>
+                    <strong>500+</strong>
+                    <span>Sinh viên</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section
+        id="clubs"
+        class="section">
+
+        <div class="section-title">
+
+            <div>
+
+                <p>
+                    CÂU LẠC BỘ
+                </p>
+
+                <h2>
+                    Câu lạc bộ nổi bật
+                </h2>
+
+            </div>
+
+            <p>
+                Khám phá các câu lạc bộ
+                dành cho sinh viên.
+            </p>
+
+        </div>
+
+
+        <div class="search-box">
+
+            🔎
+
+            <input
+                id="clubSearch"
+                type="text"
+                placeholder="Tìm kiếm câu lạc bộ..."
+                oninput="searchClubs()">
+
+        </div>
+
+
+        <div
+            class="club-grid"
+            id="clubGrid">
+
+
+            <div
+                class="club-card"
+                data-name="công nghệ it lập trình">
+
+                <div class="club-icon blue">
+                    💻
+                </div>
+
+                <h3>
+                    CLB Công nghệ IT
+                </h3>
+
+                <p>
+                    Học lập trình,
+                    công nghệ và xây dựng
+                    các dự án thực tế.
+                </p>
+
+                <button
+                    onclick="joinClub('CLB Công nghệ IT')">
+
+                    Tham gia
+
+                </button>
+
+            </div>
+
+
+            <div
+                class="club-card"
+                data-name="bóng đá thể thao">
+
+                <div class="club-icon green">
+                    ⚽
+                </div>
+
+                <h3>
+                    CLB Bóng đá
+                </h3>
+
+                <p>
+                    Rèn luyện sức khỏe,
+                    giao lưu và xây dựng
+                    tinh thần đồng đội.
+                </p>
+
+                <button
+                    onclick="joinClub('CLB Bóng đá')">
+
+                    Tham gia
+
+                </button>
+
+            </div>
+
+
+            <div
+                class="club-card"
+                data-name="truyền thông media">
+
+                <div class="club-icon purple">
+                    🎤
+                </div>
+
+                <h3>
+                    CLB Truyền thông
+                </h3>
+
+                <p>
+                    Sáng tạo nội dung,
+                    thiết kế và tổ chức
+                    chương trình.
+                </p>
+
+                <button
+                    onclick="joinClub('CLB Truyền thông')">
+
+                    Tham gia
+
+                </button>
+
+            </div>
+
+
+            <div
+                class="club-card"
+                data-name="tiếng anh">
+
+                <div class="club-icon orange">
+                    🌎
+                </div>
+
+                <h3>
+                    CLB Tiếng Anh
+                </h3>
+
+                <p>
+                    Luyện giao tiếp,
+                    thuyết trình và
+                    nâng cao tiếng Anh.
+                </p>
+
+                <button
+                    onclick="joinClub('CLB Tiếng Anh')">
+
+                    Tham gia
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section
+        id="events"
+        class="section events">
+
+        <div class="section-title">
+
+            <div>
+
+                <p>
+                    SỰ KIỆN
+                </p>
+
+                <h2>
+                    Sự kiện sắp diễn ra
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="event-list">
+
+
+            <div class="event-card">
+
+                <div class="date">
+
+                    <strong>
+                        25
+                    </strong>
+
+                    <span>
+                        THÁNG 9
+                    </span>
+
+                </div>
+
+                <div class="event-info">
+
+                    <h3>
+                        Workshop AI
+                        dành cho sinh viên
+                    </h3>
+
+                    <p>
+                        📍 Phòng A101
+                    </p>
+
+                    <p>
+                        🕒 08:00 - 11:00
+                    </p>
+
+                </div>
+
+                <button
+                    onclick="registerEvent('Workshop AI')">
+
+                    Đăng ký
+
+                </button>
+
+            </div>
+
+
+            <div class="event-card">
+
+                <div class="date">
+
+                    <strong>
+                        02
+                    </strong>
+
+                    <span>
+                        THÁNG 10
+                    </span>
+
+                </div>
+
+                <div class="event-info">
+
+                    <h3>
+                        Giải bóng đá
+                        sinh viên
+                    </h3>
+
+                    <p>
+                        📍 Sân vận động trường
+                    </p>
+
+                    <p>
+                        🕒 15:00 - 18:00
+                    </p>
+
+                </div>
+
+                <button
+                    onclick="registerEvent('Giải bóng đá sinh viên')">
+
+                    Đăng ký
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <section
+        id="about"
+        class="about">
+
+        <h2>
+            Student Hub
+        </h2>
+
+        <p>
+            Hệ thống quản lý câu lạc bộ
+            và sự kiện sinh viên.
+        </p>
+
+    </section>
+
+
+    <footer>
+
+        <strong>
+            🎓 Student Hub
+        </strong>
+
+        <p>
+            © 2026 Student Hub
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
