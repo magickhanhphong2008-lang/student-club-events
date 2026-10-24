@@ -29,12 +29,5 @@
 
 ---
 
-## 🛠️ Công Nghệ Sử Dụng (Tech Stack)
-
-* **Frontend:** HTML5, CSS3, JavaScript / Tailwind CSS (hoặc Framework tương ứng).
-* **UI/UX Design:** Giao diện tối giản, đáp ứng trải nghiệm người dùng (Responsive UI).
-* **Backend & Database:** *(Thêm công nghệ backend/CSDL bạn sử dụng vào đây - ví dụ: Node.js, Express, MongoDB/MySQL...)*
-
----
 
 
