@@ -1,435 +1,122 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Student Hub</title>
-
-    <link rel="stylesheet" href="style.css">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Student Hub - khám phá câu lạc bộ và sự kiện sinh viên.">
+<title>Student Hub - Câu lạc bộ và sự kiện sinh viên</title>
+<meta name="theme-color" content="#2563eb">
+<meta property="og:title" content="Student Hub">
+<meta property="og:description" content="Khám phá câu lạc bộ và đăng ký sự kiện sinh viên.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎓%3C/text%3E%3C/svg%3E">
+<script>try{var t=localStorage.getItem("sh_theme");document.documentElement.dataset.theme=t||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light")}catch(e){}</script>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-    <header class="navbar">
-
-        <div class="logo">
-            🎓 Student Hub
-        </div>
-
-        <nav>
-
-            <a href="#home">Trang chủ</a>
-
-            <a href="#clubs">Câu lạc bộ</a>
-
-            <a href="#events">Sự kiện</a>
-
-            <a href="#about">Giới thiệu</a>
-
-        </nav>
-
-        <button
-            class="login-btn"
-            onclick="showLoginMessage()">
-
-            Đăng nhập
-
-        </button>
-
-    </header>
-
-
-    <section id="home" class="hero">
-
-        <div class="hero-content">
-
-            <p class="badge">
-                🌟 Cộng đồng sinh viên
-            </p>
-
-            <h1>
-                Khám phá
-                <span>câu lạc bộ</span>
-                và sự kiện
-                <br>
-                sinh viên
-            </h1>
-
-            <p>
-                Tìm câu lạc bộ phù hợp,
-                khám phá các hoạt động
-                và kết nối với sinh viên.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a
-                    href="#clubs"
-                    class="primary-btn">
-
-                    Khám phá câu lạc bộ
-
-                </a>
-
-                <a
-                    href="#events"
-                    class="secondary-btn">
-
-                    Xem sự kiện
-
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="hero-card">
-
-            <div class="hero-icon">
-                🎉
-            </div>
-
-            <h2>
-                Student Hub
-            </h2>
-
-            <p>
-                Tham gia - Kết nối - Phát triển
-            </p>
-
-            <div class="stats">
-
-                <div>
-                    <strong>12+</strong>
-                    <span>CLB</span>
-                </div>
-
-                <div>
-                    <strong>30+</strong>
-                    <span>Sự kiện</span>
-                </div>
-
-                <div>
-                    <strong>500+</strong>
-                    <span>Sinh viên</span>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <section
-        id="clubs"
-        class="section">
-
-        <div class="section-title">
-
-            <div>
-
-                <p>
-                    CÂU LẠC BỘ
-                </p>
-
-                <h2>
-                    Câu lạc bộ nổi bật
-                </h2>
-
-            </div>
-
-            <p>
-                Khám phá các câu lạc bộ
-                dành cho sinh viên.
-            </p>
-
-        </div>
-
-
-        <div class="search-box">
-
-            🔎
-
-            <input
-                id="clubSearch"
-                type="text"
-                placeholder="Tìm kiếm câu lạc bộ..."
-                oninput="searchClubs()">
-
-        </div>
-
-
-        <div
-            class="club-grid"
-            id="clubGrid">
-
-
-            <div
-                class="club-card"
-                data-name="công nghệ it lập trình">
-
-                <div class="club-icon blue">
-                    💻
-                </div>
-
-                <h3>
-                    CLB Công nghệ IT
-                </h3>
-
-                <p>
-                    Học lập trình,
-                    công nghệ và xây dựng
-                    các dự án thực tế.
-                </p>
-
-                <button
-                    onclick="joinClub('CLB Công nghệ IT')">
-
-                    Tham gia
-
-                </button>
-
-            </div>
-
-
-            <div
-                class="club-card"
-                data-name="bóng đá thể thao">
-
-                <div class="club-icon green">
-                    ⚽
-                </div>
-
-                <h3>
-                    CLB Bóng đá
-                </h3>
-
-                <p>
-                    Rèn luyện sức khỏe,
-                    giao lưu và xây dựng
-                    tinh thần đồng đội.
-                </p>
-
-                <button
-                    onclick="joinClub('CLB Bóng đá')">
-
-                    Tham gia
-
-                </button>
-
-            </div>
-
-
-            <div
-                class="club-card"
-                data-name="truyền thông media">
-
-                <div class="club-icon purple">
-                    🎤
-                </div>
-
-                <h3>
-                    CLB Truyền thông
-                </h3>
-
-                <p>
-                    Sáng tạo nội dung,
-                    thiết kế và tổ chức
-                    chương trình.
-                </p>
-
-                <button
-                    onclick="joinClub('CLB Truyền thông')">
-
-                    Tham gia
-
-                </button>
-
-            </div>
-
-
-            <div
-                class="club-card"
-                data-name="tiếng anh">
-
-                <div class="club-icon orange">
-                    🌎
-                </div>
-
-                <h3>
-                    CLB Tiếng Anh
-                </h3>
-
-                <p>
-                    Luyện giao tiếp,
-                    thuyết trình và
-                    nâng cao tiếng Anh.
-                </p>
-
-                <button
-                    onclick="joinClub('CLB Tiếng Anh')">
-
-                    Tham gia
-
-                </button>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <section
-        id="events"
-        class="section events">
-
-        <div class="section-title">
-
-            <div>
-
-                <p>
-                    SỰ KIỆN
-                </p>
-
-                <h2>
-                    Sự kiện sắp diễn ra
-                </h2>
-
-            </div>
-
-        </div>
-
-
-        <div class="event-list">
-
-
-            <div class="event-card">
-
-                <div class="date">
-
-                    <strong>
-                        25
-                    </strong>
-
-                    <span>
-                        THÁNG 9
-                    </span>
-
-                </div>
-
-                <div class="event-info">
-
-                    <h3>
-                        Workshop AI
-                        dành cho sinh viên
-                    </h3>
-
-                    <p>
-                        📍 Phòng A101
-                    </p>
-
-                    <p>
-                        🕒 08:00 - 11:00
-                    </p>
-
-                </div>
-
-                <button
-                    onclick="registerEvent('Workshop AI')">
-
-                    Đăng ký
-
-                </button>
-
-            </div>
-
-
-            <div class="event-card">
-
-                <div class="date">
-
-                    <strong>
-                        02
-                    </strong>
-
-                    <span>
-                        THÁNG 10
-                    </span>
-
-                </div>
-
-                <div class="event-info">
-
-                    <h3>
-                        Giải bóng đá
-                        sinh viên
-                    </h3>
-
-                    <p>
-                        📍 Sân vận động trường
-                    </p>
-
-                    <p>
-                        🕒 15:00 - 18:00
-                    </p>
-
-                </div>
-
-                <button
-                    onclick="registerEvent('Giải bóng đá sinh viên')">
-
-                    Đăng ký
-
-                </button>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-    <section
-        id="about"
-        class="about">
-
-        <h2>
-            Student Hub
-        </h2>
-
-        <p>
-            Hệ thống quản lý câu lạc bộ
-            và sự kiện sinh viên.
-        </p>
-
-    </section>
-
-
-    <footer>
-
-        <strong>
-            🎓 Student Hub
-        </strong>
-
-        <p>
-            © 2026 Student Hub
-        </p>
-
-    </footer>
-
-
-    <script src="script.js"></script>
-
+<a class="skip" href="#main">Bỏ qua điều hướng</a>
+<header class="navbar">
+  <a class="logo" href="#home">🎓 Student Hub</a>
+  <nav id="menu" aria-label="Menu chính">
+    <a href="#home">Trang chủ</a>
+    <a href="#clubs">Câu lạc bộ</a>
+    <a href="#events">Sự kiện</a>
+    <a href="#me">Của tôi</a>
+    <a href="#about">Giới thiệu</a>
+  </nav>
+  <button class="btn" id="loginBtn">Đăng nhập</button>
+  <button class="icon-btn" id="themeBtn" aria-label="Đổi giao diện sáng/tối">🌙</button>
+  <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Mở menu" aria-expanded="false">☰</button>
+</header>
+
+<main id="main">
+<section id="home" class="hero">
+  <div class="hero-content">
+    <p class="badge">🌟 Cộng đồng sinh viên</p>
+    <h1>Tìm câu lạc bộ và sự kiện <span>hợp với bạn</span></h1>
+    <p class="lead">Xem các câu lạc bộ đang tuyển thành viên, đăng ký sự kiện sắp tới và kết nối với sinh viên cùng trường.</p>
+    <div class="hero-buttons">
+      <a href="#clubs" class="btn">Khám phá câu lạc bộ</a>
+      <a href="#events" class="btn btn-light">Xem sự kiện</a>
+    </div>
+  </div>
+  <div class="hero-card">
+    <div class="hero-icon">🎉</div>
+    <h2>Student Hub</h2>
+    <p>Tham gia - Kết nối - Phát triển</p>
+    <div class="stats">
+      <div><strong id="statClubs">0</strong><span>CLB</span></div>
+      <div><strong id="statEvents">0</strong><span>Sự kiện sắp tới</span></div>
+      <div><strong id="statJoined">0</strong><span>Bạn đã tham gia</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="clubs" class="section">
+  <div class="section-title">
+    <h2>Câu lạc bộ nổi bật</h2>
+    <p>Chọn lĩnh vực bạn quan tâm hoặc tìm theo tên.</p>
+  </div>
+  <div class="toolbar">
+    <label class="search-box">
+      <span aria-hidden="true">🔎</span>
+      <input id="clubSearch" type="search" placeholder="Tìm kiếm câu lạc bộ..." aria-label="Tìm kiếm câu lạc bộ">
+    </label>
+    <div class="chips" id="chips" role="group" aria-label="Lọc theo lĩnh vực"></div>
+  </div>
+  <div class="club-grid" id="clubGrid" aria-live="polite"></div>
+  <p class="empty" id="clubEmpty" hidden>Không tìm thấy câu lạc bộ phù hợp. Hãy thử từ khóa khác hoặc chọn "Tất cả".</p>
+</section>
+
+<section id="events" class="section events">
+  <div class="section-title">
+    <h2>Sự kiện sắp diễn ra</h2>
+    <p>Đăng ký sớm để giữ chỗ.</p>
+  </div>
+  <div class="event-list" id="eventList"></div>
+  <p class="empty" id="eventEmpty" hidden>Hiện chưa có sự kiện nào sắp tới.</p>
+</section>
+
+<section id="me" class="section">
+  <div class="section-title">
+    <h2>Hoạt động của tôi</h2>
+    <p>Câu lạc bộ và sự kiện bạn đã đăng ký.</p>
+  </div>
+  <div id="meBox"></div>
+</section>
+
+<section id="about" class="about">
+  <h2>Student Hub</h2>
+  <p>Hệ thống quản lý câu lạc bộ và sự kiện sinh viên.</p>
+</section>
+</main>
+
+<footer>
+  <strong>🎓 Student Hub</strong>
+  <p>© 2026 Student Hub</p>
+</footer>
+
+<dialog id="dialog">
+  <form method="dialog" id="form" novalidate>
+    <h3 id="dlgTitle"></h3>
+    <p id="dlgDesc" class="muted"></p>
+    <label>Họ và tên<input name="name" required autocomplete="name"></label>
+    <label id="mssvRow">MSSV<input name="mssv" inputmode="numeric" pattern="\d{6,12}" placeholder="6-12 chữ số"></label>
+    <label>Email trường<input name="email" type="email" required autocomplete="email"></label>
+    <p class="error" id="formError" role="alert"></p>
+    <div class="dlg-actions">
+      <button type="button" class="btn btn-light" id="cancelBtn">Hủy</button>
+      <button type="submit" class="btn" id="submitBtn">Xác nhận</button>
+    </div>
+  </form>
+</dialog>
+<dialog id="detail">
+  <div id="detailBody"></div>
+  <div class="dlg-actions">
+    <button type="button" class="btn btn-light" id="closeDetail">Đóng</button>
+    <button type="button" class="btn" id="detailJoin"></button>
+  </div>
+</dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
 </body>
-
 </html>
