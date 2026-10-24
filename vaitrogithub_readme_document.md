@@ -37,12 +37,4 @@
 
 ---
 
-## 🚀 Hướng Dẫn Cài Đặt & Chạy Dự Án
 
-1. **Clone repository:**
-   ```bash
-   git clone https://github.com/username/student-hub.git
-   ```
-
-2. **Mở dự án:**
-   * Bạn có thể mở trực tiếp file `frontend/index.html` bằng extension **Live Server** trên VS Code.
